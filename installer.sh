@@ -36,5 +36,17 @@ sudo apt-get update
 # Install Docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# start the Docker service
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
 # Test the installation
 sudo docker run hello-world
+
+# # Docker Desktop
+# Download the .deb file
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+# Install the package
+sudo apt install ./docker-desktop-amd64.deb
+# Note: At the end of the installation process, apt displays an error due to installing a downloaded package. You can ignore this error message
+# N: Download is performed unsandboxed as root, as file '/home/user/Downloads/docker-desktop.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
