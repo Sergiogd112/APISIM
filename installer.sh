@@ -38,7 +38,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 # start the Docker service
 sudo systemctl enable docker.service
+sudo systemctl start docker.service
 sudo systemctl enable containerd.service
+sudo systemctl start containerd.service
 
 # Test the installation
 sudo docker run hello-world
