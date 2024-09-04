@@ -49,6 +49,6 @@ wget 'https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_s
     --output-document=docker-desktop-amd64.deb
 # Install the package
 sudo apt install ./docker-desktop-amd64.deb -y
-rm
+rm -f docker-desktop-amd64.deb
 # Note: At the end of the installation process, apt displays an error due to installing a downloaded package. You can ignore this error message
 # N: Download is performed unsandboxed as root, as file '/home/user/Downloads/docker-desktop.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
